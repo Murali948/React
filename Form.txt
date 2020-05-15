@@ -1,0 +1,29 @@
+import React, { Component } from 'react'
+
+class Forms extends Component {
+    render() {
+
+        this.state = {
+            name: "Murali",
+            age: 24
+        }
+        this.handleChange = (e) => {
+            this.setState({
+                name: e.target.value
+            })
+        }
+
+
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <h1>Hi user please enter your name</h1>
+                    <input type="text" onChange={this.handleChange} />
+                    <button>Submit</button>
+                </form>
+                <h1>Hi, welcome {this.Myinfo.name}</h1>
+            </div>
+        )
+    }
+}
+export default Forms
